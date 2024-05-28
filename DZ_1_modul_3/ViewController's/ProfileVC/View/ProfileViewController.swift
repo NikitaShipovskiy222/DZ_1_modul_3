@@ -22,7 +22,7 @@ final class ProfileViewController: UIViewController{
         return $0
     }(UIImageView(frame: CGRect(x: 140, y: 258, width: 148, height: 148)))
     
-    private lazy var emailProfile = UILabel.makeProfileLabel(text: "Email пользователя", sizeFont: 28, alignment: .left, x: 30, y: 459, w: view.frame.width - 60, h: 28)
+    private lazy var emailProfile = UILabel.makeProfileLabel(text: "Email пользователя", sizeFont: 25, alignment: .left, x: 80, y: imageProfile.frame.maxY + 53, w: view.frame.width - 160, h: 28)
     
     
     
@@ -52,7 +52,7 @@ final class ProfileViewController: UIViewController{
     
     private lazy var vStack = UIStackView.makeStack(addName: myAccount, addEmail: settiongButton, addPasscode: supportButton, x: 70 , y: emailProfile.frame.maxY + 43, width: view.frame.width - 140, h: 151, spacing: 10)
     
-    private lazy var exitButton = UIButton.profileButton(title: "Выход", img: .init(), x: 70, y: vStack.frame.maxY + 130, w: view.frame.width - 140, contentH: .center, titileSetting: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), action: exiteAction)
+    private lazy var exitButton = UIButton.profileButton(title: "Выход", img: .init(), x: 70, y: vStack.frame.maxY + 120, w: view.frame.width - 140, contentH: .center, titileSetting: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), action: exiteAction)
     
     lazy var exiteAction = UIAction { [weak self] _ in
         NotificationCenter.default.post(Notification(name: Notification.Name("setRoot"), userInfo: ["vc": "second"]))

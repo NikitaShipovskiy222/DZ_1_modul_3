@@ -15,7 +15,7 @@ final class LoginViewController: UIViewController {
     private var isPrivate = true
     var singleton = SingltonModel.shared
     
-    private lazy var labelLogin = UILabel.makeLabel(text: "Войти", x: 158, y: 319, w: view.frame.width - 316, h: 41)
+    private lazy var labelLogin = UILabel.makeLabel(text: "Войти", x: 150, y: 319, w: view.frame.width - 300, h: 41)
     
     private lazy var vStack: UIStackView = {
         $0.addArrangedSubview(textFiledEmail)
@@ -50,7 +50,7 @@ final class LoginViewController: UIViewController {
     }
     private lazy var notHaveAccLabel = UILabel.makeLilLabel(text: "У вас нет аккаунт?", x: 72, y:purpureButton.frame.maxY + 29 , w: view.frame.width - 124, h: 28)
     
-    private lazy var registerButton = UIButton.purpuleButton(text: "РЕГИСТРАЦИЯ", x:   notHaveAccLabel.frame.minX + 60, y: notHaveAccLabel.frame.maxY - 23, w: view.frame.width - 100, h: 19, action: actionRegistButton)
+    private lazy var registerButton = UIButton.purpuleButton(text: "РЕГИСТРАЦИЯ", x:   notHaveAccLabel.frame.minX + 80, y: notHaveAccLabel.frame.maxY - 23, w: view.frame.width - 100, h: 19, action: actionRegistButton)
     
     lazy var actionRegistButton = UIAction { [weak self] _ in
         NotificationCenter.default.post(Notification(name: Notification.Name("setRoot"), userInfo: ["vc": "sing"]))

@@ -14,7 +14,7 @@ final class ViewController: UIViewController {
     private var isPrivate = true
     var singleton = SingltonModel.shared
     
-    private lazy var labelRegist = UILabel.makeLabel(text: "Регистрация", x: 99, y: 279, w: view.frame.width - 200, h: 41)
+    private lazy var labelRegist = UILabel.makeLabel(text: "Регистрация", x: 99, y: 279, w: view.frame.width - 198, h: 41)
     
     private lazy var labelAgree: UILabel = {
         $0.text = "Я согласен с Условиями предоставления услуг и Политикой конфиденциальности"
@@ -41,14 +41,14 @@ final class ViewController: UIViewController {
         
     }
     
-    private lazy var vStack = UIStackView.makeStack(addName: textFiledName, addEmail: textFiledEmail, addPasscode: textFiledPassword, y: 343, h: 246)
+    private lazy var vStack = UIStackView.makeStack(addName: textFiledName, addEmail: textFiledEmail, addPasscode: textFiledPassword, y: 343,width: view.frame.width - 50 ,h: 246)
     
     
     private lazy var textFiledName = UITextField.makeTextFiled(placeholder: "Имя", rightView: UIView(frame: CGRect(x: 0, y: 0, width: 21, height: 1)))
     private lazy var textFiledEmail = UITextField.makeTextFiled(placeholder: "Почта", rightView: UIView(frame: CGRect(x: 0, y: 0, width: 21, height: 1)))
     private lazy var textFiledPassword = UITextField.makeTextFiled(placeholder: "Пароль", rightView: eyeButton, passcode: true)
     
-    private lazy var haveAccLabel = UILabel.makeLilLabel(text: "Уже есть аккаунт?", x: 98, y:makePurpuleButton.frame.maxY + 29 , w: view.frame.width - 260, h: 28)
+    private lazy var haveAccLabel = UILabel.makeLilLabel(text: "Уже есть аккаунт?", x: 98, y:makePurpuleButton.frame.maxY + 29 , w: view.frame.width - 250, h: 28)
     
     private lazy var loginButton = UIButton.purpuleButton(text: "ВХОД", x: haveAccLabel.frame.minX + 40, y: haveAccLabel.frame.maxY - 23, w: view.frame.width - 100, h: 19, action: actionLoginButton)
     
